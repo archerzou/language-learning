@@ -1,6 +1,6 @@
-import { auth } from "@clerk/nextjs";
+import { auth } from "@clerk/nextjs/server";
 
-const adminIds = ["user_2hy6e6oYnMVHtEoDOhIi6yidlKm"];
+const adminId = process.env.ADMIN_USER_ID as string;
 
 export const isAdmin = () => {
   const { userId } = auth();
@@ -9,5 +9,5 @@ export const isAdmin = () => {
     return false;
   }
 
-  return adminIds.indexOf(userId) !== -1;
+  return adminId.indexOf(userId) !== -1;
 };
