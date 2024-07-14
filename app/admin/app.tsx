@@ -7,21 +7,21 @@ import { CourseList } from "./course/list";
 import { CourseEdit } from "./course/edit";
 import { CourseCreate } from "./course/create";
 
-// import { UnitList } from "./unit/list";
-// import { UnitEdit } from "./unit/edit";
-// import { UnitCreate } from "./unit/create";
+import { UnitList } from "./unit/list";
+import { UnitEdit } from "./unit/edit";
+import { UnitCreate } from "./unit/create";
 
-// import { LessonList } from "./lesson/list";
-// import { LessonEdit } from "./lesson/edit";
-// import { LessonCreate } from "./lesson/create";
+import { LessonList } from "./lesson/list";
+import { LessonEdit } from "./lesson/edit";
+import { LessonCreate } from "./lesson/create";
 
-// import { ChallengeList } from "./challenge/list";
-// import { ChallengeEdit } from "./challenge/edit";
-// import { ChallengeCreate } from "./challenge/create";
+import { ChallengeList } from "./challenge/list";
+import { ChallengeEdit } from "./challenge/edit";
+import { ChallengeCreate } from "./challenge/create";
 
-// import { ChallengeOptionList } from "./challengeOption/list";
-// import { ChallengeOptionEdit } from "./challengeOption/edit";
-// import { ChallengeOptionCreate } from "./challengeOption/create";
+import { ChallengeOptionList } from "./challengeOption/list";
+import { ChallengeOptionEdit } from "./challengeOption/edit";
+import { ChallengeOptionCreate } from "./challengeOption/create";
 
 const dataProvider = simpleRestProvider("/api");
 
@@ -35,7 +35,7 @@ const App = () => {
         edit={CourseEdit}
         recordRepresentation="title"
       />
-      {/* <Resource
+      <Resource
         name="units"
         list={UnitList}
         create={UnitCreate}
@@ -63,7 +63,7 @@ const App = () => {
         edit={ChallengeOptionEdit}
         recordRepresentation="text"
         options={{ label: "Challenge Options" }}
-      /> */}
+      />
     </Admin>
   );
 };
