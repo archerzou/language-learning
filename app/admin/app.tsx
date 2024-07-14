@@ -3,9 +3,9 @@
 import { Admin, Resource, ListGuesser } from "react-admin";
 import simpleRestProvider from "ra-data-simple-rest";
 
-// import { CourseList } from "./course/list";
-// import { CourseEdit } from "./course/edit";
-// import { CourseCreate } from "./course/create";
+import { CourseList } from "./course/list";
+import { CourseEdit } from "./course/edit";
+import { CourseCreate } from "./course/create";
 
 // import { UnitList } from "./unit/list";
 // import { UnitEdit } from "./unit/edit";
@@ -30,9 +30,9 @@ const App = () => {
     <Admin dataProvider={dataProvider}>
       <Resource
         name="courses"
-        list={ListGuesser}
-        // create={CourseCreate}
-        // edit={CourseEdit}
+        list={CourseList}
+        create={CourseCreate}
+        edit={CourseEdit}
         recordRepresentation="title"
       />
       {/* <Resource
